@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import { Helmet } from 'react-helmet-async'
 import Navigation from './components/Navigation'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -15,16 +14,18 @@ function App() {
   useSectionReveal()
   useParallaxBlobs()
 
+  // Set document title and meta tags
+  useEffect(() => {
+    document.title = 'Sai Mwan Han Hlyan - Full-Stack Developer Portfolio'
+
+    const metaDescription = document.querySelector('meta[name="description"]')
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Full-stack developer specializing in MERN stack, building modern web applications with React, Node.js, and cutting-edge technologies')
+    }
+  }, [])
+
   return (
     <>
-      <Helmet>
-        <title>Sai Mwan Han Hlyan - Full-Stack Developer Portfolio</title>
-        <meta
-          name="description"
-          content="Full-stack developer specializing in MERN stack, building modern web applications with React, Node.js, and cutting-edge technologies"
-        />
-      </Helmet>
-
       <AnimatedBlobs />
       <Navigation />
 
