@@ -1,0 +1,365 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap");
+
+:root {
+  --brutalist-black: #0a0a0a;
+  --brutalist-white: #fafafa;
+  --accent-primary: #00ff88;
+  --accent-secondary: #ff0055;
+  --accent-warning: #ffdd00;
+  --grid-size: 8px;
+}
+
+* {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+body {
+  background: var(--brutalist-black);
+  color: var(--brutalist-white);
+  overflow-x: hidden;
+}
+
+/* Brutalist Typography */
+.brutalist-heading {
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* Brutalist Grid Background */
+.grid-brutalist {
+  background-image:
+    linear-gradient(rgba(250, 250, 250, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(250, 250, 250, 0.03) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
+}
+
+/* Brutalist Borders */
+.border-brutalist {
+  border: 3px solid var(--brutalist-white);
+  box-shadow: 4px 4px 0 0 rgba(250, 250, 250, 0.2);
+}
+
+.border-brutalist-accent {
+  border: 3px solid var(--accent-primary);
+  box-shadow: 4px 4px 0 0 var(--accent-primary);
+}
+
+.border-brutalist-hover:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 0 var(--accent-primary);
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Accent Elements */
+.accent-dot {
+  width: 12px;
+  height: 12px;
+  background: var(--accent-primary);
+  border-radius: 50%;
+  animation: pulse-brutalist 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-brutalist {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Navigation */
+.nav-brutalist {
+  background: var(--brutalist-black);
+  border-bottom: 2px solid var(--brutalist-white);
+  backdrop-filter: blur(10px);
+}
+
+/* Buttons */
+.btn-brutalist {
+  position: relative;
+  background: var(--brutalist-white);
+  color: var(--brutalist-black);
+  border: 3px solid var(--brutalist-black);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-brutalist:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 0 var(--accent-primary);
+}
+
+.btn-brutalist-primary {
+  background: var(--accent-primary);
+  color: var(--brutalist-black);
+  border: 3px solid var(--brutalist-black);
+}
+
+.btn-brutalist-primary:hover {
+  background: var(--brutalist-white);
+  box-shadow: 4px 4px 0 0 var(--accent-primary);
+}
+
+.btn-brutalist-outline {
+  background: transparent;
+  color: var(--brutalist-white);
+  border: 3px solid var(--brutalist-white);
+}
+
+.btn-brutalist-outline:hover {
+  background: var(--brutalist-white);
+  color: var(--brutalist-black);
+  box-shadow: 4px 4px 0 0 var(--accent-primary);
+}
+
+/* Cards */
+.card-brutalist {
+  background: var(--brutalist-black);
+  border: 3px solid var(--brutalist-white);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-brutalist:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0 0 var(--accent-primary);
+}
+
+.card-brutalist-accent {
+  border-color: var(--accent-primary);
+}
+
+.card-brutalist-accent:hover {
+  box-shadow: 8px 8px 0 0 var(--accent-secondary);
+}
+
+/* Project Cards */
+.project-card {
+  background: var(--brutalist-black);
+  border: 3px solid var(--brutalist-white);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--accent-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover::before {
+  transform: scaleX(1);
+}
+
+.project-card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0 0 var(--accent-primary);
+  border-color: var(--accent-primary);
+}
+
+.project-image {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: grayscale(100%);
+}
+
+.project-card:hover .project-image {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* Tags */
+.tag-brutalist {
+  background: transparent;
+  border: 2px solid var(--brutalist-white);
+  color: var(--brutalist-white);
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.tag-accent {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+/* Skills */
+.skill-item {
+  background: var(--brutalist-black);
+  border: 2px solid var(--brutalist-white);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-item:hover {
+  background: var(--brutalist-white);
+  color: var(--brutalist-black);
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 0 var(--accent-primary);
+}
+
+/* Form Elements */
+.input-brutalist {
+  background: var(--brutalist-black);
+  border: 3px solid var(--brutalist-white);
+  color: var(--brutalist-white);
+  padding: 12px 16px;
+  font-weight: 500;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-brutalist:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 4px 4px 0 0 var(--accent-primary);
+  transform: translate(-2px, -2px);
+}
+
+.input-brutalist::placeholder {
+  color: rgba(250, 250, 250, 0.4);
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* Section Reveal */
+.section-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Accent Lines */
+.accent-line {
+  height: 3px;
+  background: var(--accent-primary);
+  width: 60px;
+}
+
+.accent-line-full {
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-primary) 0%, transparent 100%);
+}
+
+/* Status Badge */
+.status-available {
+  background: var(--accent-primary);
+  color: var(--brutalist-black);
+  padding: 6px 12px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 2px solid var(--brutalist-black);
+}
+
+/* Glitch Effect for Hero */
+.glitch {
+  position: relative;
+  animation: glitch 3s infinite;
+}
+
+@keyframes glitch {
+  0%, 100% {
+    text-shadow: none;
+  }
+  10%, 30%, 50%, 70%, 90% {
+    text-shadow:
+      -2px -2px 0 var(--accent-primary),
+      2px 2px 0 var(--accent-secondary);
+  }
+  15%, 35%, 55%, 75%, 95% {
+    text-shadow:
+      2px -2px 0 var(--accent-secondary),
+      -2px 2px 0 var(--accent-primary);
+  }
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  width: 2px;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent, var(--accent-primary), transparent);
+  animation: scroll-down 2s ease-in-out infinite;
+}
+
+@keyframes scroll-down {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+}
+
+/* Corner Accents */
+.corner-accent::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid var(--accent-primary);
+  border-left: 3px solid var(--accent-primary);
+}
+
+.corner-accent::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 20px;
+  height: 20px;
+  border-bottom: 3px solid var(--accent-primary);
+  border-right: 3px solid var(--accent-primary);
+}
+
+/* Loading Bar Animation */
+.loading-bar {
+  height: 3px;
+  background: var(--accent-primary);
+  animation: load 1.5s ease-in-out infinite;
+}
+
+@keyframes load {
+  0%, 100% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  50% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  51% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
