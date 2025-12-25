@@ -1,9 +1,16 @@
+import attendanceTracker from '../assets/images/attendance-tracker.png'
+import tncCarHub from '../assets/images/tnc-car-hub.png'
+import invo from '../assets/images/invo.png'
+import amazonProject from '../assets/images/amazon-project.png'
+import reactTodo from '../assets/images/react-todo.png'
+import cimso from '../assets/images/cimso.png'
+
 export const projectsData = [
   {
     id: 1,
     title: 'Attendance Tracker',
     description: 'Web-based system with Admin/User dashboards, location-based clock-in/out, and attendance verification.',
-    image: '/src/assets/images/attendance-tracker.png',
+    image: attendanceTracker,
     tags: ['MERN', 'Vercel'],
     link: 'https://sai-mwan-attendance-tracker.vercel.app/',
     linkText: 'View Live',
@@ -12,7 +19,7 @@ export const projectsData = [
     id: 2,
     title: 'TNC Car Hub',
     description: 'Modern, mobile-first car hub landing page with Tailwind utilities for rapid, maintainable styling.',
-    image: '/src/assets/images/tnc-car-hub.png',
+    image: tncCarHub,
     tags: ['HTML', 'Tailwind'],
     link: 'https://tnc-car-hub-html-tailwind-project.netlify.app/',
     linkText: 'View Live',
@@ -21,7 +28,7 @@ export const projectsData = [
     id: 3,
     title: 'Invoice Page Prototype (HTML & CSS)',
     description: 'Responsive invoice layout with clean typography and reusable structure, ready for backend integration.',
-    image: '/src/assets/images/invo.png',
+    image: invo,
     tags: ['HTML', 'CSS'],
     link: 'https://invo-html-bootstrap-css-project.netlify.app/',
     linkText: 'View Live',
@@ -30,7 +37,7 @@ export const projectsData = [
     id: 4,
     title: 'Amazon Shopping Cart',
     description: 'Interactive shopping cart with product management, cart functionality, and dynamic pricing calculations.',
-    image: '/src/assets/images/amazon-project.png',
+    image: amazonProject,
     tags: ['JavaScript', 'DOM'],
     link: 'https://github.com/Sai-Mwan-Han-Hlyan/javascript-amazon-project',
     linkText: 'View Project',
@@ -39,7 +46,7 @@ export const projectsData = [
     id: 5,
     title: 'To-Do App (React)',
     description: 'Component-based to-do list with CRUD operations and state management using React hooks.',
-    image: '/src/assets/images/react-todo.png',
+    image: reactTodo,
     tags: ['React', 'Hooks'],
     link: 'https://github.com/Sai-Mwan-Han-Hlyan/React-todo',
     linkText: 'View Project',
@@ -48,7 +55,7 @@ export const projectsData = [
     id: 6,
     title: 'Golf Booking App',
     description: 'Clean mobile UI with interactive booking flow presented at school hackathon.',
-    image: '/src/assets/images/cimso.png',
+    image: cimso,
     tags: ['Flutter', 'Dart'],
     link: 'https://github.com/Sai-Mwan-Han-Hlyan/mobile_final',
     linkText: 'View Project',
