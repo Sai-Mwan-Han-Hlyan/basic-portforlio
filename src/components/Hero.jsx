@@ -24,7 +24,7 @@ const Hero = () => {
 
           {/* Subtitle */}
           <p className="text-2xl md:text-3xl font-bold mb-4 mono">
-            FULL-STACK DEVELOPER
+            ASPIRING FULL-STACK DEVELOPER
           </p>
 
           <p className="text-lg md:text-xl mb-12 text-gray-400 max-w-2xl">
@@ -43,7 +43,7 @@ const Hero = () => {
               VIEW WORK →
             </a>
             <a
-              href="https://linkedin.com/in/sai-mwan-han-hlyan"
+              href="https://www.linkedin.com/in/sai-mwan-han-hlyan-65b765383/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-brutalist-outline px-8 py-4 text-sm"
@@ -60,7 +60,7 @@ const Hero = () => {
             </div>
             <div className="flex items-center gap-2">
               <span className="text-[#00ff88]">→</span>
-              <span>SAIMWANHANHLYAN@GMAIL.COM</span>
+              <span>saimwanhanhlyan@gmail.com</span>
             </div>
           </div>
         </div>
@@ -71,7 +71,7 @@ const Hero = () => {
         <div className="scroll-indicator" />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
